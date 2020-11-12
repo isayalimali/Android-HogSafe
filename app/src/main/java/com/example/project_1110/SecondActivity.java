@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -51,15 +53,27 @@ public class SecondActivity extends AppCompatActivity {
         initRecyclerView();
 
 
-        }
+    }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this,restName,restType,restAdd,foodImage);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, restName, restType, restAdd, foodImage);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+
+    public void onDineInClick(View view) {
+        Intent dineIn = new Intent(this, DineIn.class);
+        startActivity(dineIn);
     }
+
+    public void onDineOutClick(View view) {
+        Intent dineOut = new Intent(this, DineOut.class);
+        startActivity(dineOut);
+    }
+
+}
 
 
 
