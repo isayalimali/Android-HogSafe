@@ -63,15 +63,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
 
-    public void onDineInClick(View view) {
-        Intent dineIn = new Intent(this, DineIn.class);
-        startActivity(dineIn);
-    }
-
-    public void onDineOutClick(View view) {
-        Intent dineOut = new Intent(this, DineOut.class);
-        startActivity(dineOut);
-    }
 
 }
 
