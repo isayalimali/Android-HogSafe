@@ -49,6 +49,7 @@ public class SecondActivity extends AppCompatActivity {
         restAdd.add("6620 Finch Ave W, Etobicoke,ON");
 
         initRecyclerView();
+        //check
 
 
         }
