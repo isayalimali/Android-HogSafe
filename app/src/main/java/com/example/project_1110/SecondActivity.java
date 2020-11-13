@@ -31,7 +31,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
 
-
     private void initImage() {
         Log.d(TAG, "initImage: preparing images");
         foodImage = new int[]{R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4, R.drawable.p5};
@@ -52,6 +51,7 @@ public class SecondActivity extends AppCompatActivity {
         restAdd.add("6620 Finch Ave W, Etobicoke,ON");
 
         initRecyclerView();
+        //check
 
 
     }
