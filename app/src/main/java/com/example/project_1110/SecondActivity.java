@@ -30,8 +30,7 @@ public class SecondActivity extends AppCompatActivity {
         initImage();
     }
 
-
-    //R.drawable.person1
+    
 
     private void initImage() {
         Log.d(TAG, "initImage: preparing images");
