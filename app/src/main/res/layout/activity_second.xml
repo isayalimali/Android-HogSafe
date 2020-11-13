@@ -102,6 +102,29 @@
             app:layout_constraintBottom_toBottomOf="@id/recycler_view"
             />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:onClick="onDineInClick"
+            android:text="dine in"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/recycler_view"
+            app:layout_constraintLeft_toRightOf="@id/imageView4"
+            tools:layout_editor_absoluteX="109dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="onDineOutClick"
+            android:text="dine out"
+            app:layout_constraintBottom_toBottomOf="@id/recycler_view"
+            app:layout_constraintLeft_toRightOf="@id/button" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

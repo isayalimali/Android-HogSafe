@@ -15,17 +15,14 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onDineInClick(View view) {
-        Intent dineIn = new Intent(this, DineIn.class);
-        startActivity(dineIn);
+        Intent MainActivity = new Intent(this, MainActivity.class);
+        startActivity(MainActivity);
     }
 
     public void onDineOutClick(View view) {
-        Intent dineOut = new Intent(this, DineOut.class);
-        startActivity(dineOut);
+        Intent MainActivity2 = new Intent(this, MainActivity2.class);
+        startActivity(MainActivity2);
     }
 
-    public void onSearchClick(View view) {
-        Intent search = new Intent(this, SecondActivity.class);
-        startActivity(search);
-    }
+    
 }
