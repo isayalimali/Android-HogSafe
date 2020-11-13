@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -14,8 +16,10 @@ public class SecondActivity extends AppCompatActivity {
     private static final String TAG = "SecondActivity";
 
     private ArrayList<String> restName = new ArrayList<>();
-    private ArrayList<String> restType = new ArrayList<>();;
-    private ArrayList<String> restAdd = new ArrayList<>();;
+    private ArrayList<String> restType = new ArrayList<>();
+    ;
+    private ArrayList<String> restAdd = new ArrayList<>();
+    ;
     private int[] foodImage;
 
     @Override
@@ -29,7 +33,7 @@ public class SecondActivity extends AppCompatActivity {
 
     //R.drawable.person1
 
-    private  void initImage(){
+    private void initImage() {
         Log.d(TAG, "initImage: preparing images");
         foodImage = new int[]{R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4, R.drawable.p5};
         restName.add("HOYA SHSUI");
@@ -52,15 +56,25 @@ public class SecondActivity extends AppCompatActivity {
         //check
 
 
-        }
+    }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this,restName,restType,restAdd,foodImage);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, restName, restType, restAdd, foodImage);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+
+    public void onDineInClick(View view) {
+        Intent dineIn = new Intent(this, DineIn.class);
+        startActivity(dineIn);
     }
 
+    public void onDineOutClick(View view) {
+        Intent dineOut = new Intent(this, DineOut.class);
+        startActivity(dineOut);
+    }
+}
 
 
