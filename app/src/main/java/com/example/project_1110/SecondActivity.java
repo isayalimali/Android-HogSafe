@@ -30,7 +30,6 @@ public class SecondActivity extends AppCompatActivity {
         initImage();
     }
 
-    
 
     private void initImage() {
         Log.d(TAG, "initImage: preparing images");
